@@ -1,0 +1,330 @@
+<!doctype html>
+<html lang="ja">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta
+      name="description"
+      content="鹿児島県のパワーリフティング大会情報、県記録、競技の始め方を案内する公式ウェブサイトです。"
+    />
+    <title>鹿児島県パワーリフティング協会</title>
+    <link rel="icon" href="./assets/favicon.svg" type="image/svg+xml" />
+    <link rel="stylesheet" href="./assets/style.css" />
+  </head>
+  <body>
+    <div id="top">
+      <a class="skipLink" href="#main-content">本文へ移動</a>
+
+      <header class="siteHeader">
+        <div class="navShell">
+          <a class="brand" href="#top" aria-label="トップページへ">
+            <span class="brandMark" aria-hidden="true">
+              <span class="brandPlate brandPlateLeft"></span>
+              <span class="brandVolcano"></span>
+              <span class="brandPlate brandPlateRight"></span>
+            </span>
+            <span class="brandText">
+              <strong>鹿児島県パワーリフティング協会</strong>
+              <small>KAGOSHIMA POWERLIFTING ASSOCIATION</small>
+            </span>
+          </a>
+
+          <nav class="desktopNav" aria-label="メインナビゲーション">
+            <a class="isActive" href="#top">ホーム</a>
+            <a href="#events">大会情報</a>
+            <a href="#records">記録・ランキング</a>
+            <a href="#about">協会について</a>
+            <a href="#contact">お問い合わせ</a>
+          </nav>
+
+          <details class="mobileNav">
+            <summary aria-label="メニューを開く">
+              <span></span><span></span><span></span>
+            </summary>
+            <nav aria-label="モバイルナビゲーション">
+              <a href="#top">ホーム</a>
+              <a href="#events">大会情報</a>
+              <a href="#records">記録・ランキング</a>
+              <a href="#about">協会について</a>
+              <a href="#contact">お問い合わせ</a>
+            </nav>
+          </details>
+        </div>
+      </header>
+
+      <main id="main-content">
+        <section class="hero" aria-labelledby="hero-title">
+          <div class="heroTexture" aria-hidden="true"></div>
+          <div class="heroDiagonal heroDiagonalNavy" aria-hidden="true"></div>
+          <div class="heroDiagonal heroDiagonalOrange" aria-hidden="true"></div>
+          <div class="heroInner">
+            <div class="heroCopy">
+              <p class="eyebrow">KAGOSHIMA POWERLIFTING</p>
+              <h1 id="hero-title">挙げる。超える。<br />鹿児島から。</h1>
+              <p class="heroLead">
+                競技者も、初めての人も。<br />
+                鹿児島のパワーリフティングをもっと身近に。
+              </p>
+              <div class="heroActions">
+                <a class="button buttonPrimary" href="#events">
+                  大会情報を見る <span aria-hidden="true">→</span>
+                </a>
+                <a class="button buttonSecondary" href="#beginner">
+                  競技を始める <span aria-hidden="true">→</span>
+                </a>
+              </div>
+            </div>
+
+            <div class="heroArt" aria-hidden="true">
+              <div class="sunLine"></div>
+              <img
+                class="sakurajimaMountain"
+                src="./assets/sakurajima-hero.png"
+                alt=""
+              />
+              <img
+                class="heroLifter"
+                src="./assets/hero-lifter.png"
+                alt=""
+              />
+            </div>
+          </div>
+
+          <div class="quickLinks" aria-label="主要コンテンツ">
+            <a href="#events">
+              <span class="quickNumber">01</span>
+              <span class="quickLabel">大会スケジュール</span>
+              <span class="quickArrow" aria-hidden="true">→</span>
+            </a>
+            <a href="#records">
+              <span class="quickNumber">02</span>
+              <span class="quickLabel">県記録</span>
+              <span class="quickArrow" aria-hidden="true">→</span>
+            </a>
+            <a href="#news">
+              <span class="quickNumber">03</span>
+              <span class="quickLabel">お知らせ</span>
+              <span class="quickArrow" aria-hidden="true">→</span>
+            </a>
+          </div>
+        </section>
+
+        <section class="section aboutSection" id="about">
+          <div class="sectionHeading">
+            <div>
+              <p class="sectionEyebrow">ABOUT POWERLIFTING</p>
+              <h2>3種目で競う、純粋な強さ。</h2>
+            </div>
+            <p>
+              パワーリフティングは、3種目の成功重量の合計で順位を競います。
+              年齢や性別、体重別の階級があり、それぞれの目標に挑戦できる競技です。
+            </p>
+          </div>
+
+          <div class="liftGrid">
+            <article class="liftCard" data-number="01">
+              <div class="liftCardTop">
+                <span>01</span><span class="liftBar" aria-hidden="true"></span>
+              </div>
+              <p class="liftEnglish">SQUAT</p>
+              <h3>スクワット</h3>
+              <p>バーベルを担ぎ、しゃがんだ姿勢から立ち上がる。全身の強さを競う第一種目。</p>
+            </article>
+            <article class="liftCard" data-number="02">
+              <div class="liftCardTop">
+                <span>02</span><span class="liftBar" aria-hidden="true"></span>
+              </div>
+              <p class="liftEnglish">BENCH PRESS</p>
+              <h3>ベンチプレス</h3>
+              <p>ベンチ上でバーベルを胸まで下ろし、押し上げる。上半身の力を競う第二種目。</p>
+            </article>
+            <article class="liftCard" data-number="03">
+              <div class="liftCardTop">
+                <span>03</span><span class="liftBar" aria-hidden="true"></span>
+              </div>
+              <p class="liftEnglish">DEADLIFT</p>
+              <h3>デッドリフト</h3>
+              <p>床からバーベルを引き上げ、直立する。大会を締めくくる第三種目。</p>
+            </article>
+          </div>
+        </section>
+
+        <section class="section sectionTint" id="events">
+          <div class="sectionHeading">
+            <div>
+              <p class="sectionEyebrow">CHAMPIONSHIPS</p>
+              <h2>大会情報</h2>
+            </div>
+            <p>鹿児島県内で開催する大会の要項、申込方法、当日の案内を掲載します。</p>
+          </div>
+
+          <div class="eventGrid">
+            <article class="eventFeature">
+              <div>
+                <p class="statusBadge">2026年度</p>
+                <h3>県内大会スケジュール</h3>
+                <p>
+                  日程・会場・申込方法は、正式決定後にこちらでお知らせします。
+                  現在、掲載内容を準備しています。
+                </p>
+              </div>
+              <span class="preparingLabel">公開準備中</span>
+            </article>
+
+            <article class="eventArchive">
+              <p class="sectionEyebrow">PAST EVENT</p>
+              <h3>過去の大会実績</h3>
+              <p>
+                第23回鹿児島県パワーリフティング選手権大会の結果は、
+                日本パワーリフティング協会の公式資料で確認できます。
+              </p>
+              <a
+                class="textLink"
+                href="https://www.jpa-powerlifting.or.jp/pdf/rural/2024/0531/kagoshima_23_kekka.pdf"
+                target="_blank"
+                rel="noreferrer"
+              >
+                2024年大会結果を見る <span aria-hidden="true">↗</span>
+              </a>
+            </article>
+          </div>
+        </section>
+
+        <section class="section recordsSection" id="records">
+          <div class="recordsIntro">
+            <p class="sectionEyebrow">KAGOSHIMA RECORDS</p>
+            <h2>鹿児島県記録</h2>
+            <p>
+              階級・年代別の県記録を、男子・女子それぞれ一覧で確認できるページを準備しています。
+              記録の申請・更新方法もあわせて掲載予定です。
+            </p>
+          </div>
+
+          <div class="recordCards">
+            <article>
+              <span>MEN'S RECORDS</span>
+              <h3>男子県記録</h3>
+              <p>フルギア／ノーギア・階級別</p>
+              <span class="recordStatus">PDF公開準備中</span>
+            </article>
+            <article>
+              <span>WOMEN'S RECORDS</span>
+              <h3>女子県記録</h3>
+              <p>フルギア／ノーギア・階級別</p>
+              <span class="recordStatus">PDF公開準備中</span>
+            </article>
+          </div>
+        </section>
+
+        <section class="section beginnerSection" id="beginner">
+          <div class="sectionHeading sectionHeadingLight">
+            <div>
+              <p class="sectionEyebrow">START POWERLIFTING</p>
+              <h2>はじめての方へ</h2>
+            </div>
+            <p>「興味はあるけど、何から始めればいい？」を3つのステップで案内します。</p>
+          </div>
+
+          <div class="stepGrid">
+            <article>
+              <span>STEP 01</span>
+              <h3>競技を知る</h3>
+              <p>パワーリフティングは、スクワット・ベンチプレス・デッドリフトの合計重量を競うスポーツです。</p>
+            </article>
+            <article>
+              <span>STEP 02</span>
+              <h3>練習場所を探す</h3>
+              <p>競技経験のある指導者や、パワーリフティング設備のある施設で安全に練習を始めます。</p>
+            </article>
+            <article>
+              <span>STEP 03</span>
+              <h3>大会に挑戦する</h3>
+              <p>選手登録や申込方法を確認して大会へ。初出場までの手続きも、このサイトで案内していきます。</p>
+            </article>
+          </div>
+        </section>
+
+        <section class="section clubsSection">
+          <div class="clubsPanel">
+            <div>
+              <p class="sectionEyebrow">CLUBS &amp; GYMS</p>
+              <h2>県内クラブ・練習施設</h2>
+              <p>
+                鹿児島県内で競技に取り組むクラブや、練習できる施設の情報を募集・整理しています。
+                掲載を希望する団体には、登録方法を順次ご案内します。
+              </p>
+            </div>
+            <a class="button buttonDark" href="#contact">
+              掲載について相談する <span aria-hidden="true">→</span>
+            </a>
+          </div>
+        </section>
+
+        <section class="section newsSection" id="news">
+          <div class="newsHeading">
+            <p class="sectionEyebrow">NEWS</p>
+            <h2>お知らせ</h2>
+          </div>
+          <div class="newsList">
+            <article>
+              <time datetime="2026-07-27">2026.07.27</time>
+              <span class="newsCategory">サイト</span>
+              <p>鹿児島県パワーリフティング協会ウェブサイトの制作を開始しました。</p>
+            </article>
+            <article>
+              <time datetime="2026-07-27">2026.07.27</time>
+              <span class="newsCategory">ご案内</span>
+              <p>大会・県記録・クラブ情報は、内容確認後に順次掲載します。</p>
+            </article>
+          </div>
+        </section>
+
+        <section class="contactSection" id="contact">
+          <div>
+            <p class="sectionEyebrow">CONTACT</p>
+            <h2>お問い合わせ</h2>
+            <p>
+              大会、選手登録、クラブ掲載などのお問い合わせ窓口は現在準備中です。
+              公開までもうしばらくお待ちください。
+            </p>
+          </div>
+          <div class="contactActions">
+            <span class="preparingLabel preparingLabelLight">お問い合わせ窓口 準備中</span>
+            <a
+              class="textLink textLinkLight"
+              href="https://www.jpa-powerlifting.or.jp/"
+              target="_blank"
+              rel="noreferrer"
+            >
+              日本パワーリフティング協会 <span aria-hidden="true">↗</span>
+            </a>
+          </div>
+        </section>
+      </main>
+
+      <footer class="siteFooter">
+        <a class="brand brandFooter" href="#top">
+          <span class="brandMark" aria-hidden="true">
+            <span class="brandPlate brandPlateLeft"></span>
+            <span class="brandVolcano"></span>
+            <span class="brandPlate brandPlateRight"></span>
+          </span>
+          <span class="brandText">
+            <strong>鹿児島県パワーリフティング協会</strong>
+            <small>KAGOSHIMA POWERLIFTING ASSOCIATION</small>
+          </span>
+        </a>
+        <p>© 2026 Kagoshima Powerlifting Association.</p>
+      </footer>
+    </div>
+
+    <script>
+      document.querySelectorAll('.mobileNav a').forEach(function (link) {
+        link.addEventListener('click', function () {
+          var menu = link.closest('details');
+          if (menu) menu.removeAttribute('open');
+        });
+      });
+    </script>
+  </body>
+</html>
