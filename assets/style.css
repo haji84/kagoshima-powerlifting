@@ -1433,3 +1433,15 @@ summary:focus-visible {
     transition-duration: 0.01ms !important;
   }
 }
+
+
+/* CMS が追加した情報の表示。既存のサイトデザインを優先する。 */
+.cmsEntryList { list-style: none; padding: 0; margin: 1rem 0 0; display: grid; gap: .85rem; }
+.cmsEntryList li { border-bottom: 1px solid var(--line, #ddd); padding: 0 0 .85rem; overflow-wrap: anywhere; }
+.cmsEntryList li:last-child { border-bottom: 0; padding-bottom: 0; }
+.cmsEntryList p { margin: .25rem 0; }
+.cmsEntryList a { display: inline-block; margin-top: .25rem; }
+.cmsTableWrap { width: 100%; overflow-x: auto; }
+.cmsRecordTable { border-collapse: collapse; width: 100%; min-width: 720px; background: white; font-size: .9rem; }
+.cmsRecordTable th, .cmsRecordTable td { padding: .7rem; border: 1px solid var(--line, #ddd); text-align: left; vertical-align: top; }
+.cmsRecordTable th { background: #edf1f6; color: #14253d; }
