@@ -1,0 +1,119 @@
+# 2026-11-16: C方式（速報は即公開・重要な正式情報はレビュー）。
+# 試験中は GitHub 個人アクセストークン方式。一般編集者を招待する前に OAuth を設定すること。
+backend:
+  name: github
+  repo: haji84/kagoshima-powerlifting
+  branch: main
+  auth_methods: [token]
+locale: ja
+media_folder: assets/uploads
+public_folder: /kagoshima-powerlifting/assets/uploads
+
+collections:
+  - name: news
+    label: お知らせ（即公開）
+    description: 保存すると main に反映され、GitHub Pages の更新後に公開されます。
+    publish_mode: simple
+    files:
+      - name: feed
+        label: お知らせ一覧
+        file: content/news.json
+        format: json
+        fields:
+          - name: items
+            label: お知らせ
+            widget: list
+            summary: "{{fields.date}} | {{fields.title}}"
+            fields:
+              - { name: date, label: 掲載日, widget: datetime, format: "YYYY-MM-DD", date_format: "YYYY-MM-DD", time_format: false }
+              - { name: category, label: 種別, widget: select, options: [サイト, ご案内, ニュース, その他] }
+              - { name: title, label: 見出し, widget: string }
+              - { name: body, label: 詳細, widget: text, required: false }
+              - { name: url, label: 関連URL, widget: string, required: false }
+
+  - name: clubs
+    label: クラブ・練習施設（即公開）
+    publish_mode: simple
+    files:
+      - name: list
+        label: 施設一覧
+        file: content/clubs.json
+        format: json
+        fields:
+          - name: items
+            label: 掲載施設
+            widget: list
+            summary: "{{fields.name}}"
+            fields:
+              - { name: name, label: 施設・クラブ名, widget: string }
+              - { name: area, label: 市町村・地域, widget: string }
+              - { name: description, label: 紹介文, widget: text, required: false }
+              - { name: url, label: 公式URL, widget: string, required: false }
+
+  - name: events
+    label: 大会日程（承認後）
+    description: 下書きはプルリクエストに保存。管理者が内容確認後、GitHubで統合して公開。
+    publish_mode: editorial_workflow
+    publish: false
+    files:
+      - name: list
+        label: 大会予定
+        file: content/events.json
+        format: json
+        fields:
+          - name: items
+            label: 大会一覧
+            widget: list
+            summary: "{{fields.date}} | {{fields.title}}"
+            fields:
+              - { name: date, label: 開催日, widget: datetime, format: "YYYY-MM-DD", date_format: "YYYY-MM-DD", time_format: false }
+              - { name: title, label: 大会名, widget: string }
+              - { name: venue, label: 会場, widget: string }
+              - { name: description, label: 補足・申込案内, widget: text, required: false }
+              - { name: url, label: 要項・申込URL, widget: string, required: false }
+
+  - name: results
+    label: 大会結果（承認後）
+    description: 公式結果の原本を確認してから公開する。
+    publish_mode: editorial_workflow
+    publish: false
+    files:
+      - name: list
+        label: 大会結果
+        file: content/results.json
+        format: json
+        fields:
+          - name: items
+            label: 結果資料
+            widget: list
+            summary: "{{fields.date}} | {{fields.title}}"
+            fields:
+              - { name: date, label: 開催日, widget: datetime, format: "YYYY-MM-DD", date_format: "YYYY-MM-DD", time_format: false }
+              - { name: title, label: 大会名, widget: string }
+              - { name: url, label: 公式結果URL, widget: string }
+
+  - name: records
+    label: 県記録（承認後）
+    description: 認定前の数値は登録しない。大会公式結果・記録原本と照合する。
+    publish_mode: editorial_workflow
+    publish: false
+    files:
+      - name: list
+        label: 県記録一覧
+        file: content/records.json
+        format: json
+        fields:
+          - name: items
+            label: 認定県記録
+            widget: list
+            summary: "{{fields.category}} {{fields.weightClass}} {{fields.lift}} | {{fields.athlete}}"
+            fields:
+              - { name: category, label: 区分, widget: select, options: [男子, 女子] }
+              - { name: equipment, label: ギア区分, widget: select, options: [ノーギア, フルギア] }
+              - { name: ageGroup, label: 年代区分, widget: string }
+              - { name: weightClass, label: 階級, widget: string }
+              - { name: lift, label: 種目, widget: select, options: [スクワット, ベンチプレス, デッドリフト, トータル] }
+              - { name: athlete, label: 選手名（公表可能な氏名）, widget: string }
+              - { name: weightKg, label: 記録kg, widget: number, value_type: float, min: 0.5 }
+              - { name: date, label: 記録日, widget: datetime, format: "YYYY-MM-DD", date_format: "YYYY-MM-DD", time_format: false }
+              - { name: sourceUrl, label: 公式根拠URL, widget: string }
